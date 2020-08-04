@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+
+import csv 
+import sys
+
+csv_filename = sys.argv[1]
+student_usn = sys.argv[2]
+def generate_report(csv_file,name_list):
+	report = []
+	with open(csv_file) as file:
+		line = csv.reader(file)	
+		next(line)
+		
+
+def make_report(report):
+	file = open('generated_report.txt','w+')
+	for i in report:
+		file.write(i + '\n')
+	file.close()
+generate_report(csv_filename,name_list)
+
+
